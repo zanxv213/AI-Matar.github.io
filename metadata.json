@@ -1,0 +1,5 @@
+{
+  "name": "AI Photo Studio",
+  "description": "An AI-powered photo editing website with Photoshop-like features. Users can upload images, make selections with rectangle or brush tools, and use text prompts to perform powerful edits like object replacement, color changes, generative fill, and background removal.",
+  "requestFramePermissions": []
+}
