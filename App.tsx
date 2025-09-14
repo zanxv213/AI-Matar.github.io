@@ -237,7 +237,7 @@ const App: React.FC = () => {
   if (isLoading) {
     return <Loader t={t} />;
   }
-
+  
   return (
     <div className={`flex h-screen w-screen font-sans overflow-hidden ${language === 'ar' ? 'flex-row-reverse' : ''}`}>
       <Toolbar activeTool={activeTool} onToolChange={handleToolChange} t={t} language={language}/>

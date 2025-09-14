@@ -122,7 +122,7 @@ export const EditorPanel: React.FC<EditorPanelProps> = ({
   };
 
   return (
-    <aside className="w-96 bg-slate-900/40 backdrop-blur-2xl ltr:border-l rtl:border-r border-white/10 p-6 flex flex-col space-y-6 overflow-y-auto shadow-2xl shadow-black/50">
+    <aside className="w-96 bg-slate-900/40 backdrop-blur-2xl ltr:border-l rtl:border-r border-white/10 p-6 flex flex-col shadow-2xl shadow-black/50">
       <div className="pb-4 border-b border-white/10">
         <div className="flex items-center justify-between mb-3">
             <h2 className="text-2xl font-bold text-slate-100">{t('panel.title')}</h2>
@@ -133,17 +133,21 @@ export const EditorPanel: React.FC<EditorPanelProps> = ({
         </div>
       </div>
 
-      <div className="flex-1 opacity-100 transition-opacity duration-300" style={{ opacity: allDisabled ? 0.5 : 1 }}>
-        {renderToolPanel()}
-      </div>
-
-      <div className="space-y-3 border-t border-white/20 pt-6">
-         <div className="flex space-x-3 rtl:space-x-reverse">
-            <button onClick={onUndo} disabled={!canUndo || allDisabled} className="flex-1 bg-slate-800/50 hover:bg-slate-700/70 disabled:opacity-40 disabled:cursor-not-allowed text-slate-100 font-semibold py-2 px-4 rounded-lg transition-all duration-300 border border-white/10">{t('panel.history.undo')}</button>
-            <button onClick={onRedo} disabled={!canRedo || allDisabled} className="flex-1 bg-slate-800/50 hover:bg-slate-700/70 disabled:opacity-40 disabled:cursor-not-allowed text-slate-100 font-semibold py-2 px-4 rounded-lg transition-all duration-300 border border-white/10">{t('panel.history.redo')}</button>
+      <div className="flex-1 overflow-y-auto py-6">
+        <div className="opacity-100 transition-opacity duration-300" style={{ opacity: allDisabled ? 0.5 : 1 }}>
+          {renderToolPanel()}
         </div>
-        <Button onClick={onReset} icon={ResetIcon} disabled={allDisabled}>{t('panel.history.reset')}</Button>
-        <Button onClick={onDownload} icon={DownloadIcon} disabled={allDisabled}>{t('panel.history.save')}</Button>
+      </div>
+      
+      <div className="flex-shrink-0">
+        <div className="space-y-3 border-t border-white/20 pt-6">
+          <div className="flex space-x-3 rtl:space-x-reverse">
+              <button onClick={onUndo} disabled={!canUndo || allDisabled} className="flex-1 bg-slate-800/50 hover:bg-slate-700/70 disabled:opacity-40 disabled:cursor-not-allowed text-slate-100 font-semibold py-2 px-4 rounded-lg transition-all duration-300 border border-white/10">{t('panel.history.undo')}</button>
+              <button onClick={onRedo} disabled={!canRedo || allDisabled} className="flex-1 bg-slate-800/50 hover:bg-slate-700/70 disabled:opacity-40 disabled:cursor-not-allowed text-slate-100 font-semibold py-2 px-4 rounded-lg transition-all duration-300 border border-white/10">{t('panel.history.redo')}</button>
+          </div>
+          <Button onClick={onReset} icon={ResetIcon} disabled={allDisabled}>{t('panel.history.reset')}</Button>
+          <Button onClick={onDownload} icon={DownloadIcon} disabled={allDisabled}>{t('panel.history.save')}</Button>
+        </div>
       </div>
     </aside>
   );
