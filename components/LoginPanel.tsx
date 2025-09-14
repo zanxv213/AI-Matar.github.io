@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import * as firebaseService from '../services/firebaseService';
+import * as firebaseService from '../services/firebaseService.ts';
 
 type Language = 'en' | 'ar';
 

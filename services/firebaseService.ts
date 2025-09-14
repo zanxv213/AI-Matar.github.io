@@ -7,7 +7,7 @@ import {
   User,
   AuthError
 } from 'firebase/auth';
-import { auth } from '../firebase/config';
+import { auth } from '../firebase/config.ts';
 
 export const onAuthStateChangedListener = (callback: (user: User | null) => void) => {
   return onAuthStateChanged(auth, callback);

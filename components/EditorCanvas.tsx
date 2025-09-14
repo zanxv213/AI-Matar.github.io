@@ -1,5 +1,5 @@
 import React, { useRef, useEffect, useState, useImperativeHandle } from 'react';
-import { Tool, SelectionRect } from '../types';
+import { Tool, SelectionRect } from '../types.ts';
 
 export interface EditorCanvasProps {
   imageUrl: string;

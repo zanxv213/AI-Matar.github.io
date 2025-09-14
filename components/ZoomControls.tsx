@@ -1,5 +1,5 @@
 import React from 'react';
-import { ZoomInIcon, ZoomOutIcon, FitScreenIcon } from './icons';
+import { ZoomInIcon, ZoomOutIcon, FitScreenIcon } from './icons/index.tsx';
 
 interface ZoomControlsProps {
   zoom: number;

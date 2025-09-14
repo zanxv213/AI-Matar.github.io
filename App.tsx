@@ -1,14 +1,14 @@
 import React, { useState, useRef, useCallback, useEffect } from 'react';
-import { Toolbar } from './components/Toolbar';
-import { EditorCanvas, EditorCanvasHandle } from './components/EditorCanvas';
-import { EditorPanel } from './components/EditorPanel';
-import { PreviewControls } from './components/PreviewControls';
-import { ZoomControls } from './components/ZoomControls';
-import Loader from './components/Loader';
-import { Tool, SelectionRect } from './types';
-import * as geminiService from './services/geminiService';
-import { UploadIcon } from './components/icons';
-import { translations } from './i18n';
+import { Toolbar } from './components/Toolbar.tsx';
+import { EditorCanvas, EditorCanvasHandle } from './components/EditorCanvas.tsx';
+import { EditorPanel } from './components/EditorPanel.tsx';
+import { PreviewControls } from './components/PreviewControls.tsx';
+import { ZoomControls } from './components/ZoomControls.tsx';
+import Loader from './components/Loader.tsx';
+import { Tool, SelectionRect } from './types.ts';
+import * as geminiService from './services/geminiService.ts';
+import { UploadIcon } from './components/icons/index.tsx';
+import { translations } from './i18n/index.ts';
 
 type Language = 'en' | 'ar';
 

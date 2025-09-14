@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { Tool } from '../types';
-import { SelectIcon, BrushIcon, ExpandIcon, ScissorIcon, MagicWandIcon, TransformIcon, EraseIcon } from './icons';
+import { Tool } from '../types.ts';
+import { SelectIcon, BrushIcon, ExpandIcon, ScissorIcon, MagicWandIcon, TransformIcon, EraseIcon } from './icons/index.tsx';
 
 interface ToolbarProps {
   activeTool: Tool;

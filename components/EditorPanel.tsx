@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { Tool } from '../types';
-import { DownloadIcon, ScissorIcon, MagicWandIcon, ResetIcon, SparklesIcon } from './icons';
+import { Tool } from '../types.ts';
+import { DownloadIcon, ScissorIcon, MagicWandIcon, ResetIcon, SparklesIcon } from './icons/index.tsx';
 
 type Language = 'en' | 'ar';
 
